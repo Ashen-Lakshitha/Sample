@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {
+        height: 100%;
+      }
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: rgb(187, 20, 137);
+        height: 550px;
+      }
+
+      /* Set black background color, white text and some padding */
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(33, 37, 41);
+      }
+      .nav-link {
+        font-weight: 600;
+        color: black;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          visibility: hidden;
+        }
+        .logo_img {
+          float: right; /*change palace of the logo when when size discreasing*/
+        }
+        .logo_stat {
+          visibility: hidden;
+        }
+        .row.content {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!---This is place to create navigation bar-->
+    <nav class="navbar navbar-expand-md fixed navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img
+          class="logo_img"
+          src="img/logo.jpg"
+          style="width: 30px; height: 30px;"
+          alt=""
+        />
+        <span class="logo_stat" style="color: aliceblue;">Logo</span>
+      </a>
+    </nav>
+    <!--Navigation bar end-->
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          class="col-md-2 collapse navbar-collapse d-md-block bg-light sidebar mt-2"
+          id="navbarTogglerDemo02"
+        >
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <!--Sidebar-->
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span data-feather="home"></span>
+                  <span
+                    ><svg
+                      class="bi bi-person-lines-fill"
+                      width="1.3em"
+                      height="1.3em"
+                      viewBox="0 0 16 16"
+                      fill="bg-dark"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                    &nbsp; Customers
+                  </span>
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span data-feather="file"></span>
+                  <span
+                    ><svg
+                      class="bi bi-person-circle"
+                      width="1.3em"
+                      height="1.3em"
+                      viewBox="0 0 16 16"
+                      fill="bg-dark"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                      />
+                    </svg>
+                    &nbsp; Update</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span data-feather="shopping-cart"></span>
+                  <span
+                    ><svg
+                      class="bi bi-person-plus-fill"
+                      width="1.3em"
+                      height="1.3em"
+                      viewBox="0 0 16 16"
+                      fill="bg-dark"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M13 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z"
+                      />
+                    </svg>
+                    &nbsp; Add</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span data-feather="users"></span>
+                  <span
+                    ><svg
+                      class="bi bi-person-dash-fill"
+                      width="1.3em"
+                      height="1.3em"
+                      viewBox="0 0 16 16"
+                      fill="bg-dark"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                    &nbsp; Remove</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--End sidebar-->
+
+        <!--Main Container-->
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2 text-center">Customer Details</h1>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!--Script for toggle-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <footer class="container-fluid text-center"><!--footer content--></footer>
+  </body>
+</html>
